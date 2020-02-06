@@ -13,8 +13,13 @@
 
 .container_footer {
   /* Rectangle 222 */
+<<<<<<< HEAD
   display: flex;
   position: relative;
+=======
+
+  position: absolute;
+>>>>>>> Cambio en el codigo de los svg de los iconos y css de footer
   left: 25%;
   right: 0%;
   top: 0%;
@@ -30,7 +35,10 @@
 .text_footer {
   color: #ffffff;
   margin-left: 6%;
+<<<<<<< HEAD
   margin-top: 0.3rem;
+=======
+>>>>>>> Cambio en el codigo de los svg de los iconos y css de footer
 }
 .icons_footer {
   position: absolute;
