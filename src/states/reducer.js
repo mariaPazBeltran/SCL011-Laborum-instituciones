@@ -1,6 +1,14 @@
-import initialState from '../states/inicialStates';
+import InitialState from '../states/inicialStates';
 function reducer(state, action){
   switch(action.type){
+    case 'rememberMe':
+      const input = action.payload
+      const value = input.type === 'checkbox' ? input.checked : input.value;
+     console.log(action.payload)
+      return{
+      ...state,
+      rememberMe: value
+      }
     case 'register':
      
       return{
@@ -11,7 +19,7 @@ function reducer(state, action){
           
         }
       case 'reset':
-        return initialState
+        return InitialState
       default:
         throw new Error();
   }

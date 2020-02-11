@@ -2,14 +2,18 @@ import React from 'react';
 
 import './App.css';
 import Footer from './components/Footer'
-import Login from './components/Login'
+//import Login from './components/Login'
+import Register from './components/Register';
+import ProviderContext from './states/provider';
 
 function App() {
   return (
-    <div className="App">
-      <Login/>
+    <ProviderContext>
+<div className="App">
+      <Register/>
       <Footer/>
     </div>
+    </ProviderContext>
   );
 }
 
