@@ -20,6 +20,7 @@ const Login =()=>{
                     <input type='submit' placeholder='Iniciar Sesión'/>
                 </form>
                 <p>¿No tienes cuenta?</p><p>Registrate</p>
+                <button>Iniciar Sesión</button>
             </div>
         </div>
     )
