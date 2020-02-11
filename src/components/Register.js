@@ -7,6 +7,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const firebase = useFirebaseApp();
+
   const register = async () => {
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
@@ -18,21 +19,8 @@ const Register = () => {
       </div>
       <div>
         <h3>Registrarse</h3>
-        <form>
-          <label>Correo</label>
-          <input
-            type="email"
-            id="email"
-            onChange={e => setEmail(e.target.value)}
-          />
-          <label>Contraseña</label>
-          <input
-            type="password"
-            id="password"
-            onChange={e => setPassword(e.target.value)}
-          />
-        </form>
-        {/*   <form>
+
+         <form>
           <label>Correo</label>
           <input
             type="text"
@@ -53,7 +41,7 @@ const Register = () => {
             Recuérdame
           </label>
           <input type="submit" placeholder="Comenzar" />
-        </form> */}
+        </form> 
         <p>¿Ya tienes cuenta?</p> <p>Inicia Sesión</p>
         <button onClick={register}>Comenzar</button>
       </div>
