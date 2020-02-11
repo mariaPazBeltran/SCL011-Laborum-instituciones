@@ -6,6 +6,7 @@ function reducer(state, action){
       return{
       ...state,
       email: dehe
+      return{
       }
       case 'login':
         return{
