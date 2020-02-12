@@ -1,15 +1,12 @@
 import initialState from '../states/inicialStates';
 function reducer(state, action){
   switch(action.type){
-    case 'register':
-     
+    case 'saveUserInformation':
       return{
-      
+      ...state,
+      [action.field]: action.value
       }
-      case 'login':
-        return{
-          
-        }
+      
       case 'reset':
         return initialState
       default:
