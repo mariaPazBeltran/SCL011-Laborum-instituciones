@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
-import Encabezado from "./Encabezado";
-import Context from "../states/context";
+import Encabezado from "../Encabezado";
+import Context from "../../states/context";
 
 const Register = () => {
 

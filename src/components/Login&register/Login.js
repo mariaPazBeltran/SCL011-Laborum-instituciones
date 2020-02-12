@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
-import Encabezado from "./Encabezado";
-import Context from "../states/context";
+import Context from "../../states/context";
+
+import './style.css'
 
 const Login = () => {
   const {state, dispatch} = useContext(Context)
@@ -33,43 +34,46 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <div>
-        <Encabezado />
-      </div>
-      <div>
-        <h3>Inicio sesión</h3>
+      
+      
+        <h3 className='login-h3'>Inicio sesión</h3>
 
         {!user && (
           <form>
-            <label>Correo</label>
+            <label className='label'>Correo</label> <br/>
             <input
               type="text"
               placeholder="Escribe tu correo"
               name="email"
               value={state.email}
               onChange={onChange}
-            />
-            <label>Contraseña</label>
+              className="input-login"
+
+            /><br/>
+            <label className='label'>Contraseña</label> <br/>
             <input
               type="password"
               placeholder="Escribe tu correo"
               name="password"
               value={state.password}
               onChange={onChange}
-            />
-            <label>
+              className="input-login"
+            /><br/>
+            
+            <label className="h6-1"> 
               <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
-          type:'rememberMe', payload:event.target })} type="checkbox" />
+          type:'rememberMe', payload:event.target })} type="checkbox" /> 
               Recuérdame
             </label>
-            <button onClick={login}>Iniciar Sesión</button>
+            <p className='h6'>¿Olvidaste tu contraseña?</p>
+            <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
         )}
         {user && <button onClick={logout}>Salir</button>}
       
-        <p>¿No tienes cuenta?</p>
-        <p>Registrate</p>
-      </div>
+        
+        
+    
     </div>
   );
 };
