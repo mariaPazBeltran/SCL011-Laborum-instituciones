@@ -9,15 +9,7 @@ function reducer(state, action){
       ...state,
       rememberMe: value
       }
-    case 'register':
-     
-      return{
-      
-      }
-      case 'login':
-        return{
-          
-        }
+    
       case 'reset':
         return InitialState
       default:
