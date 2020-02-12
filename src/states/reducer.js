@@ -4,14 +4,18 @@ function reducer(state, action){
     case 'rememberMe':
       const input = action.payload
       const value = input.type === 'checkbox' ? input.checked : input.value;
-     console.log(action.payload)
       return{
       ...state,
       rememberMe: value
       }
-    
+    case 'saveUserInformation':
+      return{
+      ...state,
+      [action.field]: action.value
+      }
+      
       case 'reset':
-        return InitialState
+        return initialState
       default:
         throw new Error();
   }

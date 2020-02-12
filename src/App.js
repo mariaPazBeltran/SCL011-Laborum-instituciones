@@ -1,12 +1,14 @@
 import React from 'react';
-
 import './App.css';
-import Footer from './components/Footer'
 //import Login from './components/Login'
 import Register from './components/Register';
 import ProviderContext from './states/provider';
+import {useFirebaseApp} from 'reactfire';
+import Footer from './components/Footer';
 
 function App() {
+  const firebase=useFirebaseApp();
+  console.log(firebase);
   return (
     <ProviderContext>
 <div className="App">
