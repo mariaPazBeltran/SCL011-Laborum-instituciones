@@ -8,20 +8,23 @@ const Register = () => {
 
   const {state, dispatch} = useContext(Context)
   const firebase = useFirebaseApp();
+ 
   const onChange =(e)=>{
     dispatch({type:'saveUserInformation', field:e.target.name, value:e.target.value})
   }
-
+  
   const register = async (event) => {
     event.preventDefault()
       const email = state.email
       const password = state.password
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
+  
   const logout=async()=>{
     await firebase.auth().signOut();
   }
- const user=useUser();
+
+  const user=useUser();
 
   return (
     <div className="login-Register">
@@ -49,7 +52,8 @@ const Register = () => {
             onChange={onChange}
           />
           <label>
-            <input type="checkbox" />
+            <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
+          type:'rememberMe', payload:event.target })} type="checkbox" />
             Recuérdame
           </label>
           <button onClick={register}>Comenzar</button>

@@ -1,6 +1,9 @@
-const initialState={
+const InitialState ={
 
   email:'',
-  password:''
+  password:'',
+  user: '',
+  rememberMe: false
 };
-export default initialState;
+export default InitialState;
+
