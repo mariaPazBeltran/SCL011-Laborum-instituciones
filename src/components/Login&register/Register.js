@@ -2,10 +2,13 @@ import React from 'react';
 
 import Encabezado from './Encabezado'
 
+
 const Register =()=>{
     return(
-        <div className='login-Register'>
-            <div>
+        
+        <div className='container-Register'>
+            
+            <div className=''>
                <Encabezado/> 
             </div>
             <div>
