@@ -1,17 +1,24 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Mada:400,500,600,700&display=swap');
 * {
   font-family: "Mada";
 }
+=======
+>>>>>>> css de el componente login
 /* Select */
 
 .login-photo {
     background-image: url(../../assets/imgSelect.png);
     height: 765px;
+<<<<<<< HEAD
     background-color: #EBFAF4 ;
+=======
+>>>>>>> css de el componente login
     top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+<<<<<<< HEAD
     
 }
 .select1{
@@ -22,6 +29,15 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+=======
+}
+.select1{
+    width: 520px;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+>>>>>>> css de el componente login
 }
 
 .title-select{
@@ -33,12 +49,18 @@
     color: #2A303A;
 }
 .parraf-select{
+<<<<<<< HEAD
     margin-right: 40%;
     margin-top: 2%;
+=======
+
+    
+>>>>>>> css de el componente login
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+<<<<<<< HEAD
     color: #5E807F;
 }
 .select2{
@@ -52,11 +74,31 @@
 .btn-select{
     font-style: bold ;
     font-weight: bold;
+=======
+}
+ 
+
+
+.select2{
+    display: flex;
+    flex-direction: column;
+    width: 204px;
+    height: 15%;
+    
+    
+
+}
+
+.btn-select{
+
+    font-style: bold ;
+>>>>>>> css de el componente login
     font-size: 16px ;
     color: #00BCA0 ;
     background-color: transparent;
     border-color: transparent;
     width: 100%;
+<<<<<<< HEAD
     text-align: left;
    
 }
@@ -74,12 +116,29 @@
     margin-right:2%;
     display: flex;
     flex-direction: column;  
+=======
+   
+}
+
+.select3{
+    width: 60%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-self: start;
+    margin: 10px;
+    background-color: thistle;
+
+>>>>>>> css de el componente login
 }
 .links{
     justify-content: space-around;
     display: flex;
     align-self: center;
     color:#C78D00;
+<<<<<<< HEAD
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -93,10 +152,22 @@
     justify-content: space-between;
     margin-left: 4%;
     align-self: flex-start;
+=======
+}    
+
+.select4{
+    width: 30%;
+    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: tomato;
+    align-self: flex-end;
+>>>>>>> css de el componente login
     margin-top: auto;
 
 }
 .logoHR{
+<<<<<<< HEAD
     width: 50%;
     margin:auto;    
 
@@ -137,12 +208,22 @@
     box-sizing: border-box;
     border-radius: 5px;
 }
+=======
+    width: 40%;
+    margin:auto;    
+
+} 
+
+
+
+>>>>>>> css de el componente login
 /* Login */
 .login-screen {
     display: flex;
 }
 
 .login-box-left {
+<<<<<<< HEAD
     width: 40%;
 }
 
@@ -150,11 +231,19 @@
     margin-top: 10%;
     width: 60%;
     margin-left: 15%;
+=======
+    width: 35%;
+}
+
+.login-logo {
+    margin-top: 20%;
+>>>>>>> css de el componente login
 }
 
 .login-h1 {
     color: #8CAFAE;
     font-size: 30px;
+<<<<<<< HEAD
     margin-left: 8%;
     text-align: left;
     width: 277px;
@@ -179,6 +268,19 @@
     font-size: 21px;
     line-height: 27px;
     margin-bottom: 12%;
+=======
+    margin-left: 95px;
+    text-align: left;
+    width: 277px;
+}
+
+.login-h3 {
+    color: #2A303A;
+    font-size: 21px;
+    margin-left: 95px;
+    text-align: left;
+    width: 277px;
+>>>>>>> css de el componente login
 }
 
 h5 {
@@ -188,6 +290,7 @@ h5 {
     text-align: left;
     width: 277px;
 }
+<<<<<<< HEAD
 .input-login, .input-register {
     background: #FFFFFF;
     border: 1px solid #9DC5BB;
@@ -195,12 +298,24 @@ h5 {
     padding: 10px;
     width: 260px;
     margin-top: 3%;
+=======
+
+.input-login {
+    background: #FFFFFF;
+    border: 1px solid #9DC5BB;
+    border-radius: 5px;
+    margin-left: 95px;
+    padding: 10px;
+    width: 260px;
+
+>>>>>>> css de el componente login
     font-family: Mada;
     font-size: 12px;
     line-height: 15px;
     display: flex;
     color: #ACB3B3;
 }
+<<<<<<< HEAD
 .input-register{
     margin-bottom: 5%;
 }
@@ -222,11 +337,22 @@ h5 {
 }
 
 .h6, .h6-1, .h6-register{
+=======
+
+.section-6, .section-7 {
+    display: flex;
+    width: 277px;
+    margin-left: 95px;
+}
+
+.h6 {
+>>>>>>> css de el componente login
     color: #2A303A;
     font-size: 12px;
     font-weight: bold;
     text-align: left;
     margin-right: auto;
+<<<<<<< HEAD
     width: 70%;
     justify-content: space-around;
     display: flex;
@@ -255,6 +381,11 @@ h5 {
 }
 
 .link-login,.h6-2 {
+=======
+}
+
+.link-login {
+>>>>>>> css de el componente login
     color: #C78D00;
 }
 
@@ -263,9 +394,15 @@ h5 {
     border: none;
     border-radius: 5px;
     padding: 10px;
+<<<<<<< HEAD
     width: 280px;
     font-weight: bold;
     line-height: 22px;
+=======
+    margin-left: 95px;
+    width: 265px;
+
+>>>>>>> css de el componente login
     font-family: Mada;
     font-size: 16px;
     text-align: center;
