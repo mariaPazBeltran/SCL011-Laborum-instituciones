@@ -13,8 +13,8 @@
 
 .container_footer {
   /* Rectangle 222 */
-
-  position: absolute;
+  display: flex;
+  position: relative;
   left: 25%;
   right: 0%;
   top: 0%;
@@ -30,6 +30,7 @@
 .text_footer {
   color: #ffffff;
   margin-left: 6%;
+  margin-top: 0.3rem;
 }
 .icons_footer {
   position: absolute;
