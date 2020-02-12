@@ -17,6 +17,10 @@ const Register = () => {
     event.preventDefault()
       const email = state.email
       const password = state.password
+      const rememberMe = state.rememberMe
+      localStorage.setItem('rememberMe', rememberMe);
+      localStorage.setItem('email', rememberMe ? email : '');
+      localStorage.setItem('password', rememberMe ? password : '');
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
   

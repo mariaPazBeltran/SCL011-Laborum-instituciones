@@ -13,9 +13,16 @@ function reducer(state, action){
       ...state,
       [action.field]: action.value
       }
+      case 'getLocalStorage':
+        return{
+          ...state,
+          email: action.payload.email,
+          password: action.payload.password,
+          rememberMe: action.payload.rememberMe
+        }
       
       case 'reset':
-        return initialState
+        return InitialState
       default:
         throw new Error();
   }
