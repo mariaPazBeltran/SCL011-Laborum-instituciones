@@ -103,23 +103,38 @@
 }
 
 .login-logo {
-    margin-top: 20%;
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 10%;
 }
 
 .login-h1 {
     color: #8CAFAE;
     font-size: 30px;
-    margin-left: 95px;
+    margin-left: 5%;
     text-align: left;
     width: 277px;
+}
+.login-container{
+    display: flex;
+    margin:5%;
+    flex-direction: column;
+    width: 35%;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .login-h3 {
     color: #2A303A;
-    font-size: 21px;
-    margin-left: 95px;
     text-align: left;
     width: 277px;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 27px;
+    margin-bottom: 15%;
 }
 
 h5 {
@@ -134,24 +149,28 @@ h5 {
     background: #FFFFFF;
     border: 1px solid #9DC5BB;
     border-radius: 5px;
-    margin-left: 95px;
     padding: 10px;
     width: 260px;
-
+    margin-top: 3%;
     font-family: Mada;
     font-size: 12px;
     line-height: 15px;
     display: flex;
     color: #ACB3B3;
 }
+.cont-remember{
+    display: flex;
+    align-content: center;
+    width: 100%;
 
+}
 .section-6, .section-7 {
     display: flex;
     width: 277px;
     margin-left: 95px;
 }
 
-.h6 {
+.h6, .h6-1 {
     color: #2A303A;
     font-size: 12px;
     font-weight: bold;
@@ -168,9 +187,9 @@ h5 {
     border: none;
     border-radius: 5px;
     padding: 10px;
-    margin-left: 95px;
     width: 265px;
-
+    font-weight: bold;
+    line-height: 22px;
     font-family: Mada;
     font-size: 16px;
     text-align: center;

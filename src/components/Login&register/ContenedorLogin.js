@@ -10,7 +10,7 @@ export default function LoginScreen() {
       <div className="login-screen">
           <div className="login-box-left">
           <img src={require('../../assets/Logo.png')} alt='' className="login-logo" />
-          <h1 className="login-h1">Encuentra a tu equipo ideal</h1>
+          <h1 className="login-h1">Conecta con tus postulantes con las mejores ofertas</h1>
           <Login />
           <div className="section-7">
               <h6 className="h6">¿No tienes cuenta? <a className="link-login">Regístrate</a></h6>
