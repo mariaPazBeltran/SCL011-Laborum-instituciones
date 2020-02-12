@@ -5,6 +5,7 @@ import Login from './components/Login'
 import ProviderContext from './states/provider';
 import {useFirebaseApp} from 'reactfire';
 import Footer from './components/Footer';
+//import Sidebar from './components/Sidebar';
 
 function App() {
   const firebase=useFirebaseApp();
