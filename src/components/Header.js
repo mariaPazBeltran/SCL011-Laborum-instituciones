@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Header.css"
 import Logo from "../img/logo.png"
 import Lupa from "../img/lupa.png"
@@ -6,9 +6,10 @@ import Aa from "../img/Aa.png"
 import Notificacion from "../img/notificacion01.png"
 import Foto from "../img/foto.png"
 import FlechaAbajo from "../img/flechaAbajo.png"
+//import Context from "../states/context";
 
-class Header extends Component {
-    render() {
+const Header=()=> {
+    //const {state} = useContext(Context)
         return (
             <header className="col-12">
                 <div className="col-3 logoContainer">
@@ -23,14 +24,13 @@ class Header extends Component {
                         <img src={Foto} alt="fotoPerfil" className="icon"></img>
                     </div>
                     <div className="profile">
-                        <h3>Julieta Salgado</h3>
-                        <h4>julietasalgado@gmail.com</h4>
+                        <h3>Laboratoria Chile</h3>
+                        <h4>laboratoria@gmail.com</h4>
                     </div>
                     <button className="btnTransparent"><img src={FlechaAbajo} alt="flecha" className="icon"/></button>
                 </nav>
             </header>
         )
-    }
 }
 
 
