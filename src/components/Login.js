@@ -1,14 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
 import Encabezado from "./Encabezado";
+import Context from "../states/context";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const {state, dispatch} = useContext(Context)
   const firebase = useFirebaseApp();
-
-  const login = async () => {
+  useEffect(() => {
+    const rememberMe = localStorage.getItem('rememberMe') === 'true';
+  const email = rememberMe ? localStorage.getItem('email') : '';
+  const password = rememberMe ? localStorage.getItem('password') : '';
+  dispatch({type:'getLocalStorage', payload:{email, password, rememberMe}})
+  },[dispatch]);
+  const onChange =(e)=>{
+    dispatch({type:'saveUserInformation', field:e.target.name, value:e.target.value})
+  }
+  const login = async (event) => {
+    event.preventDefault()
+    const email = state.email
+    const password = state.password
+    const rememberMe = state.rememberMe
+    localStorage.setItem('rememberMe', rememberMe);
+    localStorage.setItem('email', rememberMe ? email : '');
+    localStorage.setItem('password', rememberMe ? password : '');
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
   const logout = async () => {
@@ -30,28 +45,30 @@ const Login = () => {
             <input
               type="text"
               placeholder="Escribe tu correo"
-              id="email"
-              onChange={e => setEmail(e.target.value)}
+              name="email"
+              value={state.email}
+              onChange={onChange}
             />
             <label>Contraseña</label>
             <input
               type="password"
               placeholder="Escribe tu correo"
-              id="password"
-              onChange={e => setPassword(e.target.value)}
+              name="password"
+              value={state.password}
+              onChange={onChange}
             />
             <label>
-              <input type="checkbox" />
+              <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
+          type:'rememberMe', payload:event.target })} type="checkbox" />
               Recuérdame
             </label>
-            <input type="submit" placeholder="Comenzar" />
+            <button onClick={login}>Iniciar Sesión</button>
           </form>
         )}
         {user && <button onClick={logout}>Salir</button>}
       
         <p>¿No tienes cuenta?</p>
         <p>Registrate</p>
-        <button onClick={login}>Iniciar Sesión</button>
       </div>
     </div>
   );

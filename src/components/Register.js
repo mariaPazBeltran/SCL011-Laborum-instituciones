@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
 import Encabezado from "./Encabezado";
+import Context from "../states/context";
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const firebase = useFirebaseApp();
 
-  const register = async () => {
+  const {state, dispatch} = useContext(Context)
+  const firebase = useFirebaseApp();
+ 
+  const onChange =(e)=>{
+    dispatch({type:'saveUserInformation', field:e.target.name, value:e.target.value})
+  }
+  
+  const register = async (event) => {
+    event.preventDefault()
+      const email = state.email
+      const password = state.password
+      const rememberMe = state.rememberMe
+      localStorage.setItem('rememberMe', rememberMe);
+      localStorage.setItem('email', rememberMe ? email : '');
+      localStorage.setItem('password', rememberMe ? password : '');
     await firebase.auth().createUserWithEmailAndPassword(email, password);
   };
+  
   const logout=async()=>{
     await firebase.auth().signOut();
   }
- const user=useUser();
+
+  const user=useUser();
 
   return (
     <div className="login-Register">
@@ -31,28 +45,27 @@ const Register = () => {
           <input
             type="text"
             placeholder="Escribe tu correo"
-            id="email"
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            onChange={onChange}
           />
           <label>Contraseña</label>
           <input
             type="password"
             placeholder="Escribe tu correo"
-            id="password"
-          
-            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            onChange={onChange}
           />
           <label>
-            <input type="checkbox" />
+            <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
+          type:'rememberMe', payload:event.target })} type="checkbox" />
             Recuérdame
           </label>
-          <input type="submit" placeholder="Comenzar" />
+          <button onClick={register}>Comenzar</button>
         </form> }
         {user &&
          <button onClick={logout}>Salir</button>
         }
         <p>¿Ya tienes cuenta?</p> <p>Inicia Sesión</p>
-        <button onClick={register}>Comenzar</button>
       </div>
     </div>
   );
