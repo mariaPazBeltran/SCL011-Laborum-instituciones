@@ -1,17 +1,30 @@
-import initialState from '../states/inicialStates';
+import InitialState from '../states/inicialStates';
+
 function reducer(state, action){
   switch(action.type){
-    case 'register':
-     
+    case 'rememberMe':
+      const input = action.payload
+      const value = input.type === 'checkbox' ? input.checked : input.value;
       return{
-      
+      ...state,
+      rememberMe: value
       }
-      case 'login':
+    case 'saveUserInformation':
+      return{
+      ...state,
+      [action.field]: action.value
+      }
+      case 'getLocalStorage':
         return{
-          
+          ...state,
+          email: action.payload.email,
+          password: action.payload.password,
+          rememberMe: action.payload.rememberMe
         }
+      
       case 'reset':
-        return initialState
+        return InitialState
+      
       default:
         throw new Error();
   }
