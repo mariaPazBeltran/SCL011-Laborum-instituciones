@@ -1,4 +1,5 @@
 import InitialState from '../states/inicialStates';
+
 function reducer(state, action){
   switch(action.type){
     case 'rememberMe':
@@ -23,6 +24,7 @@ function reducer(state, action){
       
       case 'reset':
         return InitialState
+      
       default:
         throw new Error();
   }
