@@ -5,6 +5,7 @@ import Login from './components/Login'
 import ProviderContext from './states/provider';
 import {useFirebaseApp} from 'reactfire';
 import Footer from './components/Footer';
+import Header from './components/Header';
 //import Sidebar from './components/Sidebar';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <ProviderContext>
 <div className="App">
+  <Header/>
       <Login/>
       <Footer/>
     </div>
