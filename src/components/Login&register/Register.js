@@ -14,6 +14,7 @@ const Register = () => {
   }
   
   const register = async (event) => {
+
     event.preventDefault()
       const email = state.email
       const password = state.password
@@ -21,14 +22,22 @@ const Register = () => {
       localStorage.setItem('rememberMe', rememberMe);
       localStorage.setItem('email', rememberMe ? email : '');
       localStorage.setItem('password', rememberMe ? password : '');
-    await firebase.auth().createUserWithEmailAndPassword(email, password);
+     const userAcc= await firebase.auth().createUserWithEmailAndPassword(email, password);
+     if(userAcc)  await firebase.auth().currentUser.sendEmailVerification();
+     alert('se le ha enviado un email para verificar la cuenta')
   };
-  
-  const logout=async()=>{
+
+ 
+ 
+
+ 
+  const logout = async ()=>{
     await firebase.auth().signOut();
   }
 
-  const user=useUser();
+  const user=useUser()
+
+  
 
   return (
     <div className="login-Register">
@@ -60,9 +69,13 @@ const Register = () => {
           type:'rememberMe', payload:event.target })} type="checkbox" />
             Recuérdame
           </label>
-          <button onClick={register}>Comenzar</button>
+          <button onClick={register }>Comenzar</button>
         </form> }
+     
+           
+
         {user &&
+          
          <button onClick={logout}>Salir</button>
         }
         <p>¿Ya tienes cuenta?</p> <p>Inicia Sesión</p>
