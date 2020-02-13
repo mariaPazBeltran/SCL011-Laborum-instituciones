@@ -66,7 +66,7 @@ const Login = () => {
           </form>
         )}
         {user && <button onClick={logout}>Salir</button>}
-      
+        <a href="/#">¿Olvidaste tu cuenta?</a>
         <p>¿No tienes cuenta?</p>
         <p>Registrate</p>
       </div>
