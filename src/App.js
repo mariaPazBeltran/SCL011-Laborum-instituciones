@@ -15,10 +15,7 @@ function App() {
   return (
     <ProviderContext>
     <div className="App">
-    
       <LoginScreen/>
-      
-    
     </div>
     </ProviderContext>
   );
