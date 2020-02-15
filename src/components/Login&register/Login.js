@@ -81,8 +81,14 @@ const Login = () => {
               type="checkbox" 
               className='rememberMe'/> 
               Recuérdame
+<<<<<<< HEAD
               <button className='h6' onClick={restore}>¿Olvidaste tu contraseña?</button>
             </h6>
+=======
+              <p className='h6-2'>¿Olvidaste tu contraseña?</p>
+            </h6>
+            
+>>>>>>> CSS del registro y del login listo
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
 

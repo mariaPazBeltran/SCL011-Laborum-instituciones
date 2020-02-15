@@ -11,9 +11,13 @@
     background-image: url(../../assets/imgSelect.png);
     height: 765px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color: #EBFAF4 ;
 =======
 >>>>>>> css de el componente login
+=======
+    background-color: #EBFAF4 ;
+>>>>>>> CSS del registro y del login listo
     top: 0px;
     display: flex;
     flex-direction: column;
@@ -32,12 +36,17 @@
 =======
 }
 .select1{
-    width: 520px;
+    width: 80%;
     height: 25%;
+    margin-left: 6%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
+<<<<<<< HEAD
 >>>>>>> css de el componente login
+=======
+    justify-content: center;
+>>>>>>> CSS del registro y del login listo
 }
 
 .title-select{
@@ -54,12 +63,18 @@
     margin-top: 2%;
 =======
 
+<<<<<<< HEAD
     
 >>>>>>> css de el componente login
+=======
+    margin-right: 40%;
+    margin-top: 2%;
+>>>>>>> CSS del registro y del login listo
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: #5E807F;
 }
@@ -75,6 +90,9 @@
     font-style: bold ;
     font-weight: bold;
 =======
+=======
+    color: #5E807F;
+>>>>>>> CSS del registro y del login listo
 }
  
 
@@ -82,9 +100,9 @@
 .select2{
     display: flex;
     flex-direction: column;
-    width: 204px;
-    height: 15%;
-    
+    width: 100%;
+    height: 40%;
+    justify-content: space-evenly;
     
 
 }
@@ -92,12 +110,17 @@
 .btn-select{
 
     font-style: bold ;
+<<<<<<< HEAD
 >>>>>>> css de el componente login
+=======
+    font-weight: bold;
+>>>>>>> CSS del registro y del login listo
     font-size: 16px ;
     color: #00BCA0 ;
     background-color: transparent;
     border-color: transparent;
     width: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-align: left;
    
@@ -117,13 +140,14 @@
     display: flex;
     flex-direction: column;  
 =======
+=======
+    text-align: left;
+>>>>>>> CSS del registro y del login listo
    
 }
-
 .select3{
-    width: 60%;
-    height: 60px;
     display: flex;
+<<<<<<< HEAD
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
@@ -132,17 +156,37 @@
     background-color: thistle;
 
 >>>>>>> css de el componente login
+=======
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 30%;
+    background-color: #EBFAF4;
+>>>>>>> CSS del registro y del login listo
 }
+.select3-1{
+    width: 30%;
+    height: 90%;
+    margin-top: 5%;
+    margin-right:2%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
 .links{
     justify-content: space-around;
     display: flex;
     align-self: center;
     color:#C78D00;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> CSS del registro y del login listo
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
+<<<<<<< HEAD
 }    
 
 .select3-2{
@@ -153,20 +197,29 @@
     margin-left: 4%;
     align-self: flex-start;
 =======
+=======
+>>>>>>> CSS del registro y del login listo
 }    
 
-.select4{
-    width: 30%;
-    height: 180px;
+.select3-2{
+    width: 70%;
+    margin-bottom: 2%;
     display: flex;
+<<<<<<< HEAD
     flex-wrap: wrap;
     background-color: tomato;
     align-self: flex-end;
 >>>>>>> css de el componente login
+=======
+    justify-content: space-between;
+    margin-left: 4%;
+    align-self: flex-start;
+>>>>>>> CSS del registro y del login listo
     margin-top: auto;
 
 }
 .logoHR{
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 50%;
     margin:auto;    
@@ -210,11 +263,48 @@
 }
 =======
     width: 40%;
+=======
+    width: 50%;
+>>>>>>> CSS del registro y del login listo
     margin:auto;    
 
 } 
-
-
+.text-logo{
+    display:flex;
+}
+.title-hr{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 28%;
+    margin-left: 5%;
+}
+.text-hr{
+    font-family: Mada;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: end;
+    margin-left: 9%;
+    margin-top: 0;
+    
+    
+}
+.btn-hr{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 22px;
+    color: #00BCA0;
+    width: 85%;
+    align-self: flex-end;
+    
+    background-color: transparent;
+    border: 1px solid #00BCA0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
 
 >>>>>>> css de el componente login
 /* Login */
@@ -224,6 +314,9 @@
 
 .login-box-left {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> CSS del registro y del login listo
     width: 40%;
 }
 
@@ -231,6 +324,7 @@
     margin-top: 10%;
     width: 60%;
     margin-left: 15%;
+<<<<<<< HEAD
 =======
     width: 35%;
 }
@@ -238,12 +332,17 @@
 .login-logo {
     margin-top: 20%;
 >>>>>>> css de el componente login
+=======
+>>>>>>> CSS del registro y del login listo
 }
 
 .login-h1 {
     color: #8CAFAE;
     font-size: 30px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> CSS del registro y del login listo
     margin-left: 8%;
     text-align: left;
     width: 277px;
@@ -254,6 +353,7 @@
     flex-direction: column;
     width: 90%;
 }
+
 
 .label{
     font-weight: bold;
@@ -268,6 +368,7 @@
     font-size: 21px;
     line-height: 27px;
     margin-bottom: 12%;
+<<<<<<< HEAD
 =======
     margin-left: 95px;
     text-align: left;
@@ -281,6 +382,8 @@
     text-align: left;
     width: 277px;
 >>>>>>> css de el componente login
+=======
+>>>>>>> CSS del registro y del login listo
 }
 
 h5 {
@@ -300,7 +403,7 @@ h5 {
     margin-top: 3%;
 =======
 
-.input-login {
+.input-login, .input-register {
     background: #FFFFFF;
     border: 1px solid #9DC5BB;
     border-radius: 5px;
@@ -314,11 +417,19 @@ h5 {
     line-height: 15px;
     display: flex;
     color: #ACB3B3;
+
 }
+.input-register{
+    margin-bottom: 5%;
+}
+<<<<<<< HEAD
 <<<<<<< HEAD
 .input-register{
     margin-bottom: 5%;
 }
+=======
+
+>>>>>>> CSS del registro y del login listo
 .cont-remember{
     display: flex;
     align-content: center;
@@ -330,6 +441,7 @@ h5 {
     box-sizing: border-box;
     border-radius: 2px;
 }
+<<<<<<< HEAD
 .section-6, .section-7 {
     display: flex;
     width: 80%;
@@ -339,12 +451,15 @@ h5 {
 .h6, .h6-1, .h6-register{
 =======
 
+=======
+>>>>>>> CSS del registro y del login listo
 .section-6, .section-7 {
     display: flex;
-    width: 277px;
-    margin-left: 95px;
+    width: 80%;
+    margin-left: 4%;
 }
 
+<<<<<<< HEAD
 .h6 {
 >>>>>>> css de el componente login
     color: #2A303A;
@@ -359,6 +474,38 @@ h5 {
     border: none;
     background-color: transparent;
 }
+.h6-register{
+    justify-content: end;
+    margin-right: 2%;
+}
+.h6{
+=======
+.h6, .h6-1, .h6-register{
+>>>>>>> CSS del registro y del login listo
+    color: #2A303A;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-right: auto;
+    width: 70%;
+    justify-content: space-around;
+    display: flex;
+}
+<<<<<<< HEAD
+
+.h6-2{
+    text-align: center;
+    margin-top: 0;
+    margin-left: 10%;
+}
+
+.link-login,.h6-2 {
+=======
+}
+
+.link-login {
+>>>>>>> css de el componente login
+=======
 .h6-register{
     justify-content: end;
     margin-right: 2%;
@@ -381,12 +528,9 @@ h5 {
 }
 
 .link-login,.h6-2 {
-=======
-}
-
-.link-login {
->>>>>>> css de el componente login
+>>>>>>> CSS del registro y del login listo
     color: #C78D00;
+
 }
 
 .btn-login {
@@ -395,6 +539,9 @@ h5 {
     border-radius: 5px;
     padding: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> CSS del registro y del login listo
     width: 280px;
     font-weight: bold;
     line-height: 22px;
