@@ -60,12 +60,16 @@ const Login = () => {
               className="input-login"
             /><br/>
             
-            <label className="h6-1"> 
-              <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
-          type:'rememberMe', payload:event.target })} type="checkbox" /> 
+            <h6 className="h6-1"> 
+              <input name='rememberMe' 
+              checked={state.rememberMe} 
+              onChange={(event)=>dispatch({type:'rememberMe', payload:event.target })} 
+              type="checkbox" 
+              className='rememberMe'/> 
               Recuérdame
-            </label>
-            <p className='h6'>¿Olvidaste tu contraseña?</p>
+              <p className='h6-2'>¿Olvidaste tu contraseña?</p>
+            </h6>
+            
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
         )}
