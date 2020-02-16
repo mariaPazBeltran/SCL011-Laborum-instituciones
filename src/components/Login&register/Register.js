@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
 import './style.css'
-
 import Context from "../../states/context";
 
 const Register = () => {
@@ -22,17 +21,19 @@ const Register = () => {
       localStorage.setItem('rememberMe', rememberMe);
       localStorage.setItem('email', rememberMe ? email : '');
       localStorage.setItem('password', rememberMe ? password : '');
-    await firebase.auth().createUserWithEmailAndPassword(email, password);
+     const userAcc= await firebase.auth().createUserWithEmailAndPassword(email, password);
+     if(userAcc)  await firebase.auth().currentUser.sendEmailVerification();
+     alert('se le ha enviado un email para verificar la cuenta')
   };
   
-  const logout=async()=>{
+  const logout = async ()=>{
     await firebase.auth().signOut();
   }
 
-  const user=useUser();
-
+  const user=useUser()
+  
   return (
-    <div className="login-container">
+     <div className="login-container">
       
         <h3 className='login-h3'>Registrarse</h3>
    {!user && 
@@ -69,7 +70,6 @@ const Register = () => {
         }
         
       </div>
-    
   );
 };
 

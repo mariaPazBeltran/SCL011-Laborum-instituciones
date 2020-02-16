@@ -6,7 +6,6 @@ const Select =()=>{
     return (
           
         <div className='login-photo'>
-            
             <div className='select1'>
                 <h1 className='title-select'>Sé parte de Alerta Empleos</h1>
                 <p className='parraf-select'>Encuentra y conecta a tus talentos con las mejores ofertas de trabajo</p>
@@ -15,7 +14,6 @@ const Select =()=>{
                 <button className='btn-select'>Instituciones</button>
                 <button className='btn-select'>Empresas</button>
             </div>
-            
            <div className='select3'>
             <section className='select3-1'>
                 <div className='text-logo'><h3 className='title-hr'>Upgrade a </h3><img className='logoHR' src={hiringRoom} alt=''/></div>
