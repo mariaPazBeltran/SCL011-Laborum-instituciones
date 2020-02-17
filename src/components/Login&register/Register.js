@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
-
+import './style.css'
 import Context from "../../states/context";
 import ModalVerify from "./ModalVerify";
 
@@ -28,57 +28,52 @@ const Register = () => {
      alert('se le ha enviado un email para verificar la cuenta')
   };
 
- 
- 
-
- 
   const logout = async ()=>{
     await firebase.auth().signOut();
   }
 
   const user=useUser()
-
   
-
   return (
-    <div className="login-Register">
-      <div>
-      </div>
-      <div>
-        <h3>Registrarse</h3>
+     <div className="login-container">
+      
+        <h3 className='login-h3'>Registrarse</h3>
+
    {!user && 
    
          <form>
-          <label>Correo</label>
+          <label className='label'>Correo</label>
           <input
             type="text"
             placeholder="Escribe tu correo"
             name="email"
             onChange={onChange}
+            className="input-register"
           />
-          <label>Contraseña</label>
+          <label className='label'>Contraseña</label>
           <input
             type="password"
             placeholder="Escribe tu correo"
             name="password"
             onChange={onChange}
+            className="input-register"
           />
-          <label>
-            <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
-          type:'rememberMe', payload:event.target })} type="checkbox" />
+          <h6 className="h6-register">
+            <input name='rememberMe' 
+            checked={state.rememberMe} 
+            onChange={(event)=>dispatch({type:'rememberMe', payload:event.target })} 
+            type="checkbox" 
+            className='rememberMe' />
             Recuérdame
-          </label>
-          <button onClick={register }>Comenzar</button>
+          </h6>
+          <button onClick={register} className="btn-login">Comenzar</button>
         </form> }
         {user &&
           <div><ModalVerify/>
           <button onClick={logout}>Salir</button></div>
           
         }
-        {console.log(user)}
-        <p>¿Ya tienes cuenta?</p> <p>Inicia Sesión</p>
       </div>
-    </div>
   );
 };
 

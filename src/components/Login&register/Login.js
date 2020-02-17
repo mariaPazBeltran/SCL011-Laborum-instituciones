@@ -8,6 +8,8 @@ import './style.css'
 const Login = () => {
   const { state, dispatch } = useContext(Context);
   const firebase = useFirebaseApp();
+  /*useEffect remplaza componentDidMount, le decimos que al momento de renderizar,
+  debe hacer el siguiente cambio de estado*/
   useEffect(() => {
     const rememberMe = localStorage.getItem("rememberMe") === "true";
     const email = rememberMe ? localStorage.getItem("email") : "";
@@ -17,6 +19,8 @@ const Login = () => {
       payload: { email, password, rememberMe }
     });
   }, [dispatch]);
+
+  //se toma el valor de los inputs de password y correo
   const onChange = e => {
     dispatch({
       type: "saveUserInformation",
@@ -24,7 +28,7 @@ const Login = () => {
       value: e.target.value
     });
   };
-
+//inicia sesion y guarda datos en el localStorage
   const login = async event => {
     event.preventDefault();
     const email = state.email;
@@ -35,10 +39,18 @@ const Login = () => {
     localStorage.setItem("password", rememberMe ? password : "");
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
+  //cierre de sesión
   const logout = async () => {
     await firebase.auth().signOut();
   };
   const user = useUser();
+//recuperar contraseña
+  const restore = async event => {
+    event.preventDefault();
+    const email = state.email;
+
+    await firebase.auth().sendPasswordResetEmail(email);
+  };
 
   const restore = async event => {
     event.preventDefault();
@@ -74,17 +86,20 @@ const Login = () => {
               onChange={onChange}
               className="input-login"/><br/>
             
-            <label className="h6-1"> 
-              <input name='rememberMe' checked={state.rememberMe} onChange={(event)=>dispatch({
-          type:'rememberMe', payload:event.target })} type="checkbox" /> 
+            <h6 className="h6-1"> 
+              <input name='rememberMe' 
+              checked={state.rememberMe} 
+              onChange={(event)=>dispatch({type:'rememberMe', payload:event.target })} 
+              type="checkbox" 
+              className='rememberMe'/> 
               Recuérdame
-            </label>
-            <p className='h6'>¿Olvidaste tu contraseña?</p><button onClick={restore}>Restablecer</button>
+              <p className='h6'>¿Olvidaste tu contraseña?</p><button onClick={restore}>Restablecer</button>
+            </h6>
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
         )}
         {user && <button onClick={logout}>Salir</button>}
-    
+
     </div>
   );
 };
