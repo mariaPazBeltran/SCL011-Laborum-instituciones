@@ -23,12 +23,10 @@
   /* Rectangle 222 */
   display: flex;
   position: relative;
-  left: 53%;
-
-  /* 
-  
+  left: 25%;
+  right: 0%;
   top: 0%;
-  bottom: 0%; */
+  bottom: 0%; 
   width: 943px;
   height: 59px;
   border-radius: 50px 0px 0px 0px;

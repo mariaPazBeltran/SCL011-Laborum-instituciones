@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import InitialState from '../states/inicialStates';
 
 function reducer(state, action){
@@ -25,6 +26,24 @@ function reducer(state, action){
       case 'reset':
         return InitialState
       
+=======
+import initialState from '../states/inicialStates';
+function reducer(state, action){
+  switch(action.type){
+    case 'register':
+     const dehe= action.payload.email
+      return{
+      ...state,
+      email: dehe
+      return{
+      }
+      case 'login':
+        return{
+          
+        }
+      case 'reset':
+        return initialState
+>>>>>>> becbae9224730426a8fe2f51b585b3696d73ca91
       default:
         throw new Error();
   }
