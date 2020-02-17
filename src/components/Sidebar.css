@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Mada:400,500,600,700&display=swap');
+* {
+  font-family: "Mada";
+}
+
+.sidebar {
+  z-index: 1000;
+  font-family: Mada;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  justify-content: center;
+  background: #2a303a;
+  position: absolute;
+  left: 0%;
+  top: 2%;
+  bottom: 0%;
+  color: #cef8ed;
+  height: 100%;
+  border-top-right-radius: 90px;
+  margin-top: 1%;
+  width: 5%;
+
+}
+/* .logo{
+  border: solid 1px red;
+  margin: 40px;
+} */
+.star-icon {
+  height: 14px;
+  width: auto;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  color: #FFBD3A;
+  font-weight: bold;
+} 
+nav a:hover path{
+  fill: #FFBD3A;
+} 
+nav a:active path {
+  fill: #01F0D1;
+}
+nav a:active {
+  font-weight: bold;
+  color: #01F0D1;
+}
+nav ul  {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+/* nav button  {
+  align-content: center;
+  margin-top: 15%;
+  margin-left: 20%;
+} */
+
+nav li {
+  list-style: none;
+  padding: 1.5em 0;
+  margin-left: 5%;
+}
+
+.btn-second-little {
+  -webkit-appearance: none !important;
+  color: #00BCA0;
+  padding: 8px 15px;
+  margin-top: 50px;
+  font-weight: bold;
+  background-color: transparent;
+  border: solid 1px #00BCA0;
+  border-radius: 5px;
+  align-content: center;
+  margin-top: 15%;
+  margin-left: 20%;
+}
+
+.btn-second-little:hover{
+  color: #FFBD3A;
+  border: solid 1px #FFBD3A;
+}
+
+.btn-second-little:active {
+  color:  #6BFFFF;
+  font-weight: bold;
+  border: solid 1px #6BFFFF;
+  
+}
