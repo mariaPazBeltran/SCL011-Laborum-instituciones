@@ -15,7 +15,6 @@ const Select =()=>{
                 <button className='btn-select'>Instituciones</button>
                 <button className='btn-select'>Empresas</button>
             </div>
-            
            <div className='select3'>
             <section className='select3-1'>
                 <div className='text-logo'><h3 className='title-hr'>Upgrade a </h3><img className='logoHR' src={hiringRoom} alt=''/></div>
