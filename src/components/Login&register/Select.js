@@ -6,7 +6,10 @@ const Select =()=>{
     return (
           
         <div className='login-photo'>
+<<<<<<< HEAD
             
+=======
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
             <div className='select1'>
                 <h1 className='title-select'>Sé parte de Alerta Empleos</h1>
                 <p className='parraf-select'>Encuentra y conecta a tus talentos con las mejores ofertas de trabajo</p>

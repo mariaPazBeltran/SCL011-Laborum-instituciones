@@ -145,6 +145,11 @@
     margin-top: 10%;
     width: 60%;
     margin-left: 15%;
+<<<<<<< HEAD
+=======
+    width: 70%;
+    margin-left: 10%;
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 }
 
 .login-h1 {
@@ -160,6 +165,13 @@
     flex-direction: column;
     width: 90%;
 }
+<<<<<<< HEAD
+=======
+    margin:5%;
+    flex-direction: column;
+    width: 35%;
+}
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 .label{
     font-weight: bold;
     font-size: 16px;
@@ -173,6 +185,10 @@
     font-size: 21px;
     line-height: 27px;
     margin-bottom: 12%;
+<<<<<<< HEAD
+=======
+    margin-bottom: 15%;
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 }
 
 h5 {
@@ -194,7 +210,10 @@ h5 {
     line-height: 15px;
     display: flex;
     color: #ACB3B3;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 }
 .input-register{
     margin-bottom: 5%;
@@ -249,7 +268,10 @@ h5 {
 
 .link-login,.h6-2 {
     color: #C78D00;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 }
 
 .btn-login {

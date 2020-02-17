@@ -6,7 +6,7 @@ import Context from "../../states/context";
 import './style.css'
 
 const Login = () => {
-  const {state, dispatch} = useContext(Context)
+  const { state, dispatch } = useContext(Context);
   const firebase = useFirebaseApp();
   /*useEffect remplaza componentDidMount, le decimos que al momento de renderizar,
   debe hacer el siguiente cambio de estado*/
