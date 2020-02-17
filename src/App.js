@@ -9,7 +9,6 @@ import {useFirebaseApp} from 'reactfire';
 //import Header from './components/Header';
 //import Sidebar from './components/Sidebar';
 
-
 function App() {
   const firebase=useFirebaseApp();
   console.log(firebase);
