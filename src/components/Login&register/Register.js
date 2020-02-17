@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
-import Encabezado from "../Encabezado";
+
 import Context from "../../states/context";
+import ModalVerify from "./ModalVerify";
 
 const Register = () => {
 
@@ -42,8 +43,6 @@ const Register = () => {
   return (
     <div className="login-Register">
       <div>
-        <Encabezado />
-       
       </div>
       <div>
         <h3>Registrarse</h3>
@@ -71,13 +70,12 @@ const Register = () => {
           </label>
           <button onClick={register }>Comenzar</button>
         </form> }
-     
-           
-
         {user &&
+          <div><ModalVerify/>
+          <button onClick={logout}>Salir</button></div>
           
-         <button onClick={logout}>Salir</button>
         }
+        {console.log(user)}
         <p>¿Ya tienes cuenta?</p> <p>Inicia Sesión</p>
       </div>
     </div>
