@@ -48,10 +48,10 @@
     "item11 item11 item11 item11 item11";
 } */
 .containerInstitutionProfile > div {
-  padding: 20px 0;
+ 
   margin-left: 20%;
   float: right;
-flex-direction: column-reverse;
+  flex-direction: column;
   display: flex;
   
 }
