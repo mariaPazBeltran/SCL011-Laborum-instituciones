@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable jsx-a11y/anchor-is-valid */
->>>>>>> e4587eafadc2db9490a609957b2abe6f24792578
 import React from 'react';
 import Login from './Login';
 import './style.css'
