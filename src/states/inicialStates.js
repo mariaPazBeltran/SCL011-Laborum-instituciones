@@ -1,6 +1,10 @@
 const initialState={
 
   email:'',
-  password:''
+  password:'',
+  rememberMe: false,
+  uploadValue: 0,
+  picture: null,
+ 
 };
 export default initialState;

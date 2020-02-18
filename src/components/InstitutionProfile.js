@@ -3,8 +3,12 @@ import "firebase/auth";
 /* import { useFirebaseApp, useUser } from "reactfire";
 import Context from "../../states/context"; */
 import './InstitutionProfile.css'
+import FileUpload from "./FileUpload";
 
 const InstitutionProfile =()=>{
+
+
+  
 return(
 
 <div className='containerInstitutionProfile'>
@@ -14,7 +18,7 @@ return(
   <div className='imgPerfilInst col-1'>
 
     {/* <div className='logo'>   */}
-    <img href='' alt=''></img>
+   <FileUpload/>
     <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
     <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
     {/* <div className='color'>  */}

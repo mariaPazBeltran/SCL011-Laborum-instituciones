@@ -21,7 +21,14 @@ function reducer(state, action){
           password: action.payload.password,
           rememberMe: action.payload.rememberMe
         }
-      
+      case 'uploadFile':
+       
+       return{
+
+        ...state,
+        picture:action.payload
+       }
+
       case 'reset':
         return InitialState
       
