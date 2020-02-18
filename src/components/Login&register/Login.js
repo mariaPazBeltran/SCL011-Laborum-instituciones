@@ -19,6 +19,7 @@ const Login = () => {
       payload: { email, password, rememberMe }
     });
   }, [dispatch]);
+
   //se toma el valor de los inputs de password y correo
   const onChange = e => {
     dispatch({
@@ -51,6 +52,13 @@ const Login = () => {
     await firebase.auth().sendPasswordResetEmail(email);
   };
 
+  const restore = async event => {
+    event.preventDefault();
+    const email = state.email;
+
+    await firebase.auth().sendPasswordResetEmail(email);
+  };
+
   return (
     <div className="login-container">
       
@@ -76,8 +84,7 @@ const Login = () => {
               name="password"
               value={state.password}
               onChange={onChange}
-              className="input-login"
-            /><br/>
+              className="input-login"/><br/>
             
             <h6 className="h6-1"> 
               <input name='rememberMe' 
@@ -92,6 +99,7 @@ const Login = () => {
           </form>
         )}
         {user && <button onClick={logout}>Salir</button>}
+
     </div>
   );
 };

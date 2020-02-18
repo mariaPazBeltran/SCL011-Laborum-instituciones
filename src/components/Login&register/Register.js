@@ -3,6 +3,7 @@ import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
 import './style.css'
 import Context from "../../states/context";
+import ModalVerify from "./ModalVerify";
 
 const Register = () => {
 
@@ -14,6 +15,7 @@ const Register = () => {
   }
   
   const register = async (event) => {
+
     event.preventDefault()
       const email = state.email
       const password = state.password
@@ -25,7 +27,7 @@ const Register = () => {
      if(userAcc)  await firebase.auth().currentUser.sendEmailVerification();
      alert('se le ha enviado un email para verificar la cuenta')
   };
-  
+
   const logout = async ()=>{
     await firebase.auth().signOut();
   }
@@ -36,6 +38,7 @@ const Register = () => {
      <div className="login-container">
       
         <h3 className='login-h3'>Registrarse</h3>
+
    {!user && 
    
          <form>
@@ -66,9 +69,10 @@ const Register = () => {
           <button onClick={register} className="btn-login">Comenzar</button>
         </form> }
         {user &&
-         <button onClick={logout}>Salir</button>
+          <div><ModalVerify/>
+          <button onClick={logout}>Salir</button></div>
+          
         }
-        
       </div>
   );
 };
