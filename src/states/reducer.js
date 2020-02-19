@@ -24,9 +24,15 @@ function reducer(state, action){
       case 'uploadFile':
        
        return{
-
         ...state,
-        picture:action.payload
+        picture: action.payload,
+        picture2: action.payload
+       }
+       case 'getLocalStorageImg':
+       return{
+        ...state,
+        picture: action.payload.logoInstitucion,
+        picture2:action.payload.logoInicio
        }
 
       case 'reset':

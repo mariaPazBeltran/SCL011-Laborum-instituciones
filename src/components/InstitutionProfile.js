@@ -16,19 +16,19 @@ return(
 
   <h2>Perfil Institución</h2>
   <div className='imgPerfilInst col-1'>
-
+<FileUpload/>
     {/* <div className='logo'>   */}
-   <FileUpload/>
+{/*   
     <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
     <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
-    {/* <div className='color'>  */}
+    {/* <div className='color'> 
     <img href='' alt=''></img>
     <h2 className='titleimgPerfilInst'>Escoge color</h2>
     <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
-     {/* <div className='inicio'>  */}
+     <div className='inicio'>  
     <img href='' alt=''></img>
     <h2 className='titleimgPerfilInst'>Sube tu foto de inicio</h2>
-    <p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p>
+    <p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p> */}
 
   </div>
 
