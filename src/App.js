@@ -6,7 +6,7 @@ import ProviderContext from './states/provider';
 import {useFirebaseApp, useUser} from 'reactfire';
 import {BrowserRouter as Router,
   Route, Redirect} from 'react-router-dom';
-import ProfileInstitution from './views/ProfileInstitution';
+import Profile from './components/perfil/contInstitution';
 
 function App() {
   const firebase=useFirebaseApp();
@@ -14,14 +14,16 @@ function App() {
   console.log(firebase);
   return (
     <ProviderContext>
-    <Router>
+      <div className="App">
+      <Router>
     <Route exact path="/">
   {user ? <Redirect to="/profile" /> : <LoginScreen />}
 </Route>
         
         <Route path="/register" component={ RegisterScreen } />
-        <Route path="/profile" component={ ProfileInstitution } />
+        <Route path="/profile" component={ Profile } />
     </Router>
+    </div>
 
     </ProviderContext>
   );

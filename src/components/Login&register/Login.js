@@ -40,9 +40,6 @@ const Login = () => {
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
 
-<<<<<<< HEAD
-  
-=======
 //recuperar contraseña
   const restore = async event => {
     event.preventDefault();
@@ -50,7 +47,6 @@ const Login = () => {
 
     await firebase.auth().sendPasswordResetEmail(email);
   };
->>>>>>> router init
 
   return (
     <div className="login-container">
