@@ -15,7 +15,7 @@ const Select =()=>{
                 <button className='btn-select'>Instituciones</button>
                 <button className='btn-select'>Empresas</button>
             </div>
-<<<<<<< HEAD
+
            <div className='select3'>
             <section className='select3-1'>
                 <div className='text-logo'><h3 className='title-hr'>Upgrade a </h3><img className='logoHR' src={hiringRoom} alt=''/></div>
@@ -29,26 +29,7 @@ const Select =()=>{
                 <a href="https://portalu.alertaempleos.com/terminos-y-condiciones" className='links'>Términos y Condiciones</a>
             </section>
             </div>
-=======
             
-           <div className='select3'>
-            <section className='select3-1'>
-                <div className='text-logo'><h3 className='title-hr'>Upgrade a </h3><img className='logoHR' src={hiringRoom} alt=''/></div>
-                <p className='text-hr'>Texto explicativo de porqué la plataforma pagada es más genial</p>
-                <button className='btn-hr'>Ver planes</button>
-            </section>
-            <section className='select3-2'>
-                <p className='links'>Conoce más</p>
-                <p className='links'>FAQ</p>
-                <p className='links'>Privacidad</p>
-                <p className='links'>Términos y Condiciones</p>
-            </section>
-            </div>
-<<<<<<< HEAD
-
->>>>>>> css de el componente login
-=======
->>>>>>> CSS del registro y del login listo
         </div>
     )
 }
