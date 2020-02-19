@@ -27,11 +27,6 @@ const Register = () => {
      if(userAcc)  await firebase.auth().currentUser.sendEmailVerification();
      alert('se le ha enviado un email para verificar la cuenta')
   };
-
-  const logout = async ()=>{
-    await firebase.auth().signOut();
-  }
-
   const user=useUser()
   
   return (
@@ -69,9 +64,7 @@ const Register = () => {
           <button onClick={register} className="btn-login">Comenzar</button>
         </form> }
         {user &&
-          <div><ModalVerify/>
-          <button onClick={logout}>Salir</button></div>
-          
+          <div><ModalVerify/></div>
         }
       </div>
   );

@@ -1,6 +1,7 @@
 const initialState={
 
   email:'',
-  password:''
+  password:'',
+  rememberMe: false
 };
 export default initialState;

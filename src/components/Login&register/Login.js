@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "firebase/auth";
-import { useFirebaseApp, useUser } from "reactfire";
+import { useFirebaseApp } from "reactfire";
 import Context from "../../states/context";
 
 import './style.css'
@@ -39,11 +39,7 @@ const Login = () => {
     localStorage.setItem("password", rememberMe ? password : "");
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
-  //cierre de sesión
-  const logout = async () => {
-    await firebase.auth().signOut();
-  };
-  const user = useUser();
+
 //recuperar contraseña
   const restore = async event => {
     event.preventDefault();
@@ -52,15 +48,11 @@ const Login = () => {
     await firebase.auth().sendPasswordResetEmail(email);
   };
 
-  
-
   return (
     <div className="login-container">
       
       
         <h3 className='login-h3'>Inicio sesión</h3>
-
-        {!user && (
           <form>
             <label className='label'>Correo</label> <br/>
             <input
@@ -92,8 +84,6 @@ const Login = () => {
             </h6>
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
-        )}
-        {user && <button onClick={logout}>Salir</button>}
 
     </div>
   );
