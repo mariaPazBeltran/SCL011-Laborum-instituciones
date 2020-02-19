@@ -1,0 +1,31 @@
+footer{
+
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2a303a;
+  border-top-left-radius: 70px;
+}
+
+.text_footer {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.icons_footer {
+  position: absolute;
+  left: 83%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.icon-footer{
+  margin-top: 1rem;
+  margin-left: 1rem;
+}

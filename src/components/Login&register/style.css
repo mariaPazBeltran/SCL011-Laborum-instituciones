@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Mada:400,500,600,700&display=swap');
+* {
+  font-family: "Mada";
+}
 /* Select */
 
 .login-photo {
@@ -8,6 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 .select1{
     width: 80%;
@@ -145,8 +150,6 @@
     margin-top: 10%;
     width: 60%;
     margin-left: 15%;
-    width: 70%;
-    margin-left: 10%;
 }
 
 .login-h1 {
@@ -162,6 +165,7 @@
     flex-direction: column;
     width: 90%;
 }
+
 .label{
     font-weight: bold;
     font-size: 16px;
@@ -175,7 +179,6 @@
     font-size: 21px;
     line-height: 27px;
     margin-bottom: 12%;
-    margin-bottom: 15%;
 }
 
 h5 {
@@ -227,6 +230,8 @@ h5 {
     width: 70%;
     justify-content: space-around;
     display: flex;
+    border: none;
+    background-color: transparent;
 }
 .h6-register{
     justify-content: end;
