@@ -4,11 +4,8 @@ import './Sidebar.css';
 function Sidebar() {
   return (
     <section>
-      <div className="sidebar col-2">
+      <div className="sidebar col-3">
         <nav>
-          <button type="button" className="btn-second-little">
-            Crea un Nuevo Aviso
-          </button>
           <ul>
             <li>
               <a>

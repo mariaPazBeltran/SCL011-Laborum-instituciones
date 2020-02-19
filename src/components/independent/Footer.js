@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer =()=>{
     return(
-      <footer className='container_footer col-10'>
+      <footer className="col-8">
      
       <div className="text_footer">
         <p>©2020 Powered by Hiring Room, todos los derechos reservados.</p>

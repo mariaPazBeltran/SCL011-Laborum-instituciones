@@ -5,9 +5,7 @@ import './App.css';
 import ProviderContext from './states/provider';
 import {useFirebaseApp} from 'reactfire';
 import Profile from './components/perfil/contInstitution';
-//import Footer from './components/Footer';
-//import Header from './components/Header';
-//import Sidebar from './components/Sidebar';
+
 
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
     <div className="App">
       {/* <LoginScreen/> */}
      {/* <RegisterScreen/> */}
-      {/* <Footer/> */}
+      
       <Profile/>
     </div>
     </ProviderContext>

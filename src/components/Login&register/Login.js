@@ -52,12 +52,7 @@ const Login = () => {
     await firebase.auth().sendPasswordResetEmail(email);
   };
 
-  const restore = async event => {
-    event.preventDefault();
-    const email = state.email;
-
-    await firebase.auth().sendPasswordResetEmail(email);
-  };
+  
 
   return (
     <div className="login-container">
@@ -93,7 +88,7 @@ const Login = () => {
               type="checkbox" 
               className='rememberMe'/> 
               Recuérdame
-              <p className='h6'>¿Olvidaste tu contraseña?</p><button onClick={restore}>Restablecer</button>
+              <button className='h6' onClick={restore}>¿Olvidaste tu contraseña?</button>
             </h6>
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
