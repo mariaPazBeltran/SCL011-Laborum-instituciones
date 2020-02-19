@@ -1,0 +1,54 @@
+.modal-content{
+    position: absolute;
+    bottom: 1.32%;
+    background: #2A303A;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 610px;
+    height: 600px;
+    top: 106px;
+    padding: 10px 20px;
+    left: 370px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .modal-content h1{
+    color:#00BCA0 ;
+  }
+  .modal{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right:0;
+    bottom:0;
+    background: #FFFFFF;
+    opacity: 0.8;
+  }
+  .modal:target{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .imgModal{
+    left: 82.62%;
+    right: -49.34%;
+    top: 30.94%;
+    bottom: 0%;
+  }
+  .imgModal img{
+      width: 480px;
+  }
+  .buttonNegation, .buttonConfirmation{
+    margin: 0vh 5vh;
+    border-radius: 5px;
+    border: solid 1px #00BCA0;
+    line-height: 30px;
+    min-width: 125px;
+  }
+  .buttonNegation{
+      color:#00BCA0 ;
+      background-color: transparent;
+  }
+  .buttonConfirmation{
+      background-color:#00BCA0;
+      color: #FFFFFF;
+  }

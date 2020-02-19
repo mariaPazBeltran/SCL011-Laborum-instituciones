@@ -1,11 +1,11 @@
 import React from "react";
 import "./Header.css"
-import Logo from "../img/logo.png"
-import Lupa from "../img/lupa.png"
-import Aa from "../img/Aa.png"
-import Notificacion from "../img/notificacion01.png"
-import Foto from "../img/foto.png"
-import FlechaAbajo from "../img/flechaAbajo.png"
+import Logo from "./img/logo.png"
+import Lupa from "./img/lupa.png"
+import Aa from "./img/Aa.png"
+import Notificacion from "./img/notificacion01.png"
+import Foto from "./img/foto.png"
+import FlechaAbajo from "./img/flechaAbajo.png"
 //import Context from "../states/context";
 
 const Header = () => {

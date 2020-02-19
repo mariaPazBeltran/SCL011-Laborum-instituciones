@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import "firebase/auth";
-import { useFirebaseApp, useUser } from "reactfire";
+import { useFirebaseApp } from "reactfire";
 import Context from "../../states/context";
 
 import './style.css'
@@ -19,6 +19,7 @@ const Login = () => {
       payload: { email, password, rememberMe }
     });
   }, [dispatch]);
+
   //se toma el valor de los inputs de password y correo
   const onChange = e => {
     dispatch({
@@ -38,11 +39,7 @@ const Login = () => {
     localStorage.setItem("password", rememberMe ? password : "");
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
-  //cierre de sesión
-  const logout = async () => {
-    await firebase.auth().signOut();
-  };
-  const user = useUser();
+
 //recuperar contraseña
   const restore = async event => {
     event.preventDefault();
@@ -56,8 +53,6 @@ const Login = () => {
       
       
         <h3 className='login-h3'>Inicio sesión</h3>
-
-        {!user && (
           <form>
             <label className='label'>Correo</label> <br/>
             <input
@@ -76,8 +71,7 @@ const Login = () => {
               name="password"
               value={state.password}
               onChange={onChange}
-              className="input-login"
-            /><br/>
+              className="input-login"/><br/>
             
             <h6 className="h6-1"> 
               <input name='rememberMe' 
@@ -86,12 +80,11 @@ const Login = () => {
               type="checkbox" 
               className='rememberMe'/> 
               Recuérdame
-              <p className='h6'>¿Olvidaste tu contraseña?</p><button onClick={restore}>Restablecer</button>
+              <button className='h6' onClick={restore}>¿Olvidaste tu contraseña?</button>
             </h6>
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
-        )}
-        {user && <button onClick={logout}>Salir</button>}
+
     </div>
   );
 };

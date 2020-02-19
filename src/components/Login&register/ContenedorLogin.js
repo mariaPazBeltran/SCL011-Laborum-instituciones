@@ -3,6 +3,8 @@ import React from 'react';
 import Login from './Login';
 import './style.css'
 import Select from '../Login&register/Select';
+import { Link } from "react-router-dom";
+
 
 
 export default function LoginScreen() {
@@ -14,7 +16,7 @@ export default function LoginScreen() {
           <h1 className="login-h1">Conecta con tus postulantes con las mejores ofertas</h1>
           <Login />
           <div className="section-7">
-              <h6 className="h6">¿No tienes cuenta? <a className="link-login">Regístrate</a></h6>
+              <h6 className="h6">¿No tienes cuenta? <Link to='/register' className="link-login">Regístrate</Link></h6>
           </div>
           </div>
 
