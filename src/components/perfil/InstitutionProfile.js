@@ -6,9 +6,6 @@ import './style.css';
 
 const InstitutionProfile =()=>{
 
-
-
-
 return(
 
   <div className='containerInstitutionProfile col-9'>
