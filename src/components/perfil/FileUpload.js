@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 //import firebase from 'firebase';
 import { useFirebaseApp} from "reactfire";
-import Context from '../states/context';
+import Context from '../../states/context';
 import "firebase/storage";
-import './FileUpload.css'
+import './style.css'
 
 
 const FileUpload =()=>{
@@ -14,12 +14,13 @@ const FileUpload =()=>{
     
     const logoInstitucion = localStorage.getItem("picture")
     const logoInicio=localStorage.getItem("picture2")
+    if(logoInstitucion && logoInicio){
+      dispatch({
+        type: "getLocalStorageImg",
+        payload: { logoInstitucion, logoInicio }
+      });
+    }
     
-    dispatch({
-      type: "getLocalStorageImg",
-      payload: { logoInstitucion, logoInicio }
-    });
-
   }, [dispatch]);
 
 const upload=async(event)=>{
@@ -52,29 +53,32 @@ const upload2=async(event)=>{
   localStorage.setItem('picture2', url2)
  })
 
-
-
   
 }
 
   return(
-    <div className='file_container'>
-
-<img  className='uno' src={state.picture} alt="logo"/>
+    
+  <div className='file_container'>
+    <div className="image-upload">
+      <label hmtlFor="file-input">
+        <img className='one' src={state.picture} alt="logo"/>
+      </label>    
+        <input id="file-input" className='uno' type="file" onChange={upload} />
       
-      <input className='uno' type="file"
-      onChange={upload} />
-<h2 className='titleimgPerfilInst'>Sube tu logo</h2>
-<p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
+    </div>
+    <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
+    <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
 
-<img href='' alt=''></img>
-<h2 className='titleimgPerfilInst'>Escoge color</h2>
-<p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
+      <img href='' alt=''></img>
+      <h2 className='titleimgPerfilInst'>Escoge color</h2>
+      <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
 
-<img  className='dos' src={state.picture2} alt="logo2"/>
-<input className='dos' type="file"
-onChange={upload2} />
-
+  <div className="image-upload">
+    <label hmtlFor="file-input">
+      <img  className='one' src={state.picture2} alt="logo2"/>
+    </label>
+      <input id='file-input'  className='dos' type="file" onChange={upload2} />
+  </div>
 
 <h2 className='titleimgPerfilInst'>Sube tu foto de inicio</h2>
 <p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p>

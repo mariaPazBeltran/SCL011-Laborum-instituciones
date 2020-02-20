@@ -10,7 +10,7 @@ const Footer =()=>{
       </div>
       <div className="icons_footer">
         <svg
-          className="iconFooter"
+          className="icon-footer"
           width="25"
           height="25"
           viewBox="0 0 25 25"
@@ -23,7 +23,7 @@ const Footer =()=>{
           />
         </svg>
         <svg
-          className="iconFooter"
+          className="icon-footer"
           width="25"
           height="25"
           viewBox="0 0 25 25"
@@ -39,7 +39,7 @@ const Footer =()=>{
         </svg>
 
         <svg
-          className="iconFooter"
+          className="icon-footer"
           width="25"
           height="25"
           viewBox="0 0 25 25"
