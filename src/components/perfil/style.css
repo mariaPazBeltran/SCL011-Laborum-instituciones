@@ -18,8 +18,7 @@
   width: 25%;
   align-items: center;
   margin: 8% 2%;
-  
-  
+
 }
 h2{
   font-weight: bold;
@@ -102,7 +101,7 @@ h2{
   margin-bottom: 5%;
   
 }
-p{
+.p-1{
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -192,7 +191,6 @@ p{
 .buttonpag{
   width: 100%;
   height: 35px;
-  
   display: flex;
   justify-content: flex-end;
 }
@@ -226,6 +224,9 @@ p{
 .image-upload>input {
   display: none;
 }
+.image-upload2>input {
+  display: none;
+}
 .one{
   margin-left: auto;
   margin-right: auto;
@@ -235,3 +236,121 @@ p{
 }
 
 /* Datos de contacto */
+
+.institutionData1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 3%;
+}
+
+.box-file1{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  
+  
+}
+.box-file2{
+  display: flex;
+  width: 80%;
+  height: 8vh;
+  margin-bottom: 2%;
+}
+.box-file3{
+  display: flex;
+  width: 80%;
+  height: 8vh;
+  margin-top: 2%;
+}
+.box-file4{
+  display: flex;
+  width: 80%;
+  height: 8vh;
+  margin-top: 2%;
+}
+.box-file2-2, .box-file2-22{
+  width: 50%;
+}
+.box-file2-22{
+  margin-left: 5%;
+}
+.phone{
+  display: flex;
+}
+.title1{
+  margin-top: 12%;
+  width: 100%;
+  display: flex;
+  height: 30px;
+}
+.p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #5E807F;
+  
+}
+.input-cod, .input-num{
+  background: #FFFFFF;
+  border: 1px solid #CEF8ED;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 80%;
+  height: 25px;
+  margin-right: 2%;
+}
+.input-cod{
+  width: 20% !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
+  align-items: center;
+  display: flex;
+  color: #5E807F;
+}
+.btn-atras1{
+  border: 1px solid #00BCA0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Mada;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  color: #00BCA0;
+  height: 30px;
+  width: 20%;
+  margin:3%;
+}
+
+.btn-next2{
+  background: #00BCA0;
+  border-radius: 5px;
+  font-family: Mada;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  height: 30px;
+  width: 20%;
+  margin:3%;
+}
+.buttonpag1{
+  width: 100%;
+  
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
+}

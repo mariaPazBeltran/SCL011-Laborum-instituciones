@@ -59,29 +59,31 @@ const upload2=async(event)=>{
   return(
     
   <div className='file_container'>
+    
     <div className="image-upload">
-      <label hmtlFor="file-input">
+      <label htmlFor='file-input'>
         <img className='one' src={state.picture} alt="logo"/>
-      </label>    
-        <input id="file-input" className='uno' type="file" onChange={upload} />
-      
-    </div>
+      </label>   
+        <input id='file-input' className='uno' type="file" onChange={upload} />
+    </div> 
+    
     <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
     <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
 
-      <img href='' alt=''></img>
-      <h2 className='titleimgPerfilInst'>Escoge color</h2>
-      <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
+  <img href='' alt=''></img>
+  <h2 className='titleimgPerfilInst'>Escoge color</h2>
+  <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
 
-  <div className="image-upload">
-    <label hmtlFor="file-input">
-      <img  className='one' src={state.picture2} alt="logo2"/>
-    </label>
-      <input id='file-input'  className='dos' type="file" onChange={upload2} />
-  </div>
+    <div className="image-upload2">
+      <label htmlFor='file-input2'>
+       <img  className='one' src={state.picture2} alt="logo2"/>
+      </label>
+      <input id='file-input2' className='dos' type="file" onChange={upload2} />
+   
+    </div>
 
-<h2 className='titleimgPerfilInst'>Sube tu foto de inicio</h2>
-<p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p>
+  <h2 className='titleimgPerfilInst'>Sube tu foto de inicio</h2>
+  <p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p>
 
     </div>
   )
