@@ -5,6 +5,10 @@ import Context from "../../states/context"; */
 import './style.css';
 
 const InstitutionProfile =()=>{
+
+
+
+
 return(
 
   <div className='containerInstitutionProfile col-9'>
@@ -41,49 +45,49 @@ return(
         <section className='fileinfo1'>
           <section className='fileinfo1-1'>
             <p>Nombre de la Institución</p> 
-            <input className='input-text'type='text'/>
+            <input className='input-text'type='text' name='nameoftheinstitution'/>
           </section>
           <section className='fileinfo1-2'>
             <p>Razón Social</p> 
-            <input className='input-text' type='text'/>
+            <input className='input-text' type='text' name='businessname'/>
           </section>
         </section>
 
         <section className='fileinfo2'>
           <section className='fileinfo2-1'>
             <p>Dirección</p>
-            <input className='input-text' type='text'/>
+            <input className='input-text' type='text' name='address'/>
           </section>
           <section className='fileinfo2-2'> 
             <p>Ciudad</p>
-            <input  className='input-text' type='text'/>
+            <input  className='input-text' type='text' name='city'/>
           </section>  
           <section className='fileinfo2-3'>
             <p>País</p>
-            <input className='input-text' type='text'/>
+            <input className='input-text' type='text' name='country'/>
           </section>  
         </section>
 
         <section className='fileinfo3'>
           <section className='fileinfo3-1'>
             <p>Fecha de Registro (No editable)</p>
-            <input className='input-date' type='date'/>
+            <input className='input-date' type='date' name='registrationdate'/>
           </section>
           <section className='fileinfo3-2'>
             <p>Última modificación (No editable)</p>
-            <input className='input-date' type='date'/>
+            <input className='input-date' type='date' name='lastmodification'/>
           </section>
         </section>
         
         <div className='container-info'>
         <section className ='description'>
           <p>Breve descripción de la Institución</p>
-          <textarea className='input-textarea'type='textarea'/>
+          <textarea className='input-textarea'type='textarea' name='briefdescriptionoftheinstitution'/>
         </section>
         <section className='cont-analitics'>
           <section className ='google'>
             <p>Google Analytics</p>
-            <input className='input-text' type='text'></input>
+            <input className='input-text' type='text' name='googleanalytics'></input>
           </section>
 
           <div className='count'> 

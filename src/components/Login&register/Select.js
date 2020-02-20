@@ -23,8 +23,8 @@ const Select =()=>{
             <section className='select3-2'>
                 <p className='links'>Conoce más</p>
                 <p className='links'>FAQ</p>
-                <p className='links'>Privacidad</p>
-                <p className='links'>Términos y Condiciones</p>
+                <a href="https://portalu.alertaempleos.com/politica-de-privacidad" className='links'>Privacidad</a>
+                <a href="https://portalu.alertaempleos.com/terminos-y-condiciones" className='links'>Términos y Condiciones</a>
             </section>
             </div>
         </div>
