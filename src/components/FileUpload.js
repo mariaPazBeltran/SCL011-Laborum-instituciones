@@ -24,8 +24,6 @@ const FileUpload =()=>{
 
 const upload=async(event)=>{
 
-
-
   const picture= event.target.files[0];
   const storageRef=  firebase.storage().ref(`/fotosInstitucion/${picture.name}`);
 
@@ -38,8 +36,6 @@ const upload=async(event)=>{
     localStorage.setItem('picture', url)
    })
 
-
-  
 }
 const upload2=async(event)=>{
 
@@ -47,7 +43,7 @@ const upload2=async(event)=>{
   const storageRef2=  firebase.storage().ref(`/fotosInstitucion2/${picture2.name}`);
   await  storageRef2.put(picture2)
   storageRef2.getDownloadURL().then(url2 => {
-  dispatch({type:'uploadFile', payload: url2})
+  dispatch({type:'uploadFile2', payload: url2})
   
   localStorage.setItem('picture2', url2)
  })

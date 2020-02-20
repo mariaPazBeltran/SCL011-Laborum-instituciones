@@ -25,7 +25,12 @@ function reducer(state, action){
        
        return{
         ...state,
-        picture: action.payload,
+        picture: action.payload
+       }
+       case 'uploadFile2':
+       
+       return{
+        ...state,
         picture2: action.payload
        }
        case 'getLocalStorageImg':
