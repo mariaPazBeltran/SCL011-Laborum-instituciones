@@ -1,3 +1,4 @@
+import './style.css'
 import React, { useContext } from "react";
 import "firebase/auth";
 //import { useFirebaseApp } from "reactfire";
@@ -46,44 +47,66 @@ const Information = () => {
         console.error("Error adding document: ", error);
       });
   };
-  return (
-    <div className="containerInstitutionProfile">
-      <h2 className="subtitle">Información de Contacto</h2>
-
-      <div>
-        <section>
-          <p>Correo</p>
-          <input className="input-text" name="mail" onChange={onChange} />
-        </section>
-        <p>Teléfono</p>
-        <input className="input-cod" name="telephonecode" />{" "}
-        <input className="input-num" name="numberphone" onChange={onChange} />
-        <p>Teléfono Adicional (opcional)</p>
-        <input className="input-cod" name="telephonecodesecond" />{" "}
-        <input
-          className="input-num"
-          name="numberphonesecond"
-          onChange={onChange}
-        />
-        <p>Pagina Web</p>
-        <input className="input-text" name="webpage" onChange={onChange} />
-        <p>Facebook</p>
-        <input className="input-text" name="facebook" onChange={onChange} />
-        <p>Linkedin</p>
-        <input className="input-text" name="linkedin" onChange={onChange} />
-        <p>Youtube</p>
-        <input className="input-text" name="youtube" onChange={onChange} />
-        <p>Twitter</p>
-        <input className="input-text" name="twitter" onChange={onChange} />
-      </div>
-      <div>
-        <button className="btn-atras">Atrás</button>
-        <button className="btn-atras" onClick={sendFirebase}>
+    return(
+        <div className='containerInstitutionProfile col-9'>
+            <section className='title'>
+            <h2>Perfil Institución</h2>
+            </section>
+            
+            <div className='institutionData1 '>
+            <h2 className='subtitle'>Información de Contacto</h2>
+                <section className='box-file1'>
+                    <p className='p'>Correo</p>
+                    <input className='input-text' name='mail' onChange={onChange}/>
+                </section >
+                <div className='box-file2'>
+                    <section className='box-file2-2'>
+                    <p className='p'>Teléfono</p>
+                    <section className='phone'>
+    <input className='input-cod' placeholder='569' name='telephonecode' onChange={onChange}/>
+    <input className='input-num' name='numberphone' onChange={onChange}/></section>
+                    </section>
+                    <section className='box-file2-22'>
+                    <p className='p'>Teléfono Adicional (opcional)</p>
+                    <section className='phone'>
+                      <input className='input-cod' placeholder='569' name='telephonecodesecond' onChange={onChange}/>
+                        <input className='input-num' name='numberphonesecond' onChange={onChange}/></section>
+                    </section>
+                </div> 
+                <section className='box.file1'>
+                <p className='p'>Pagina Web</p>
+                <input className='input-text' name='webpage' onChange={onChange}/>
+                </section>
+                <div className='box-file3'>
+                    <section className='box-file2-2'>
+                        <p className='p'>Facebook</p>
+                        <input className='input-text' name='facebook' onChange={onChange}/>
+                    </section>
+                    <section className='box-file2-2'>
+                        <p className='p'>Linkedin</p>
+                        <input className='input-text' name='linkedin' onChange={onChange}/>
+                    </section>
+                </div>
+                <div className='box-file4'>
+                    <section className='box-file2-2'>
+                        <p className='p'>Youtube</p>
+                        <input className='input-text' name='youtube' onChange={onChange}/>
+                    </section>
+                    <section className='box-file2-2'>
+                        <p className='p'>Twitter</p>
+                        <input className='input-text' name='twitter' onChange={onChange}/>
+                    </section>
+                </div>
+            
+                <div className='buttonpag1'>
+                <button className='btn-atras1'>Atrás</button>
+                 <button className="btn-atras" onClick={sendFirebase}>
           {" "}
           Terminar
         </button>
-      </div>
-    </div>
-  );
-};
-export default Information;
+                </div>
+            </div>
+        </div>
+    )
+}
+export default information;

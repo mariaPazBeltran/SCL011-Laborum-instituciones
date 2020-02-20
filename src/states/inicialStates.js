@@ -1,3 +1,5 @@
+import Foto from '../img/Sin-foto.png'
+
 const initialState={
 
   email:'',
