@@ -6,6 +6,7 @@ const initialState={
   uploadValue: 0,
   picture: null,
   picture2:null,
+  
   color:'',
   nameoftheinstitution:'',
   businessname:'',
@@ -27,5 +28,9 @@ const initialState={
   youtube:'',
   twitter:'',
   
+  background: '#fff',
+  showColorPicker: false
+ 
+
 };
 export default initialState;

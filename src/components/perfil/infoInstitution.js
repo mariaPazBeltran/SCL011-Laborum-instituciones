@@ -46,7 +46,6 @@ const Information = () => {
         console.error("Error adding document: ", error);
       });
   };
-
   return (
     <div className="containerInstitutionProfile">
       <h2 className="subtitle">Información de Contacto</h2>

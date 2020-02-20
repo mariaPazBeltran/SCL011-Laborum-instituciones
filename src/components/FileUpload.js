@@ -4,7 +4,7 @@ import { useFirebaseApp} from "reactfire";
 import Context from '../states/context';
 import "firebase/storage";
 import './FileUpload.css'
-
+import ColorPicker from './perfil/ColorPicker';
 
 const FileUpload =()=>{
   const {state, dispatch} = useContext(Context)
@@ -23,9 +23,6 @@ const FileUpload =()=>{
   }, [dispatch]);
 
 const upload=async(event)=>{
-
-
-
   const picture= event.target.files[0];
   const storageRef=  firebase.storage().ref(`/fotosInstitucion/${picture.name}`);
 
@@ -37,24 +34,19 @@ const upload=async(event)=>{
     
     localStorage.setItem('picture', url)
    })
-
-
-  
 }
 const upload2=async(event)=>{
-
   const picture2= event.target.files[0];
   const storageRef2=  firebase.storage().ref(`/fotosInstitucion2/${picture2.name}`);
   await  storageRef2.put(picture2)
   storageRef2.getDownloadURL().then(url2 => {
-  dispatch({type:'uploadFile', payload: url2})
+  dispatch({type:'uploadFile2', payload: url2})
   
   localStorage.setItem('picture2', url2)
  })
-
-
-
-  
+}
+const showColor = () => {
+  dispatch({type:'showColor'})
 }
 
   return(
@@ -66,8 +58,10 @@ const upload2=async(event)=>{
       onChange={upload} />
 <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
 <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
-
-<img href='' alt=''></img>
+<button onClick={showColor}>
+<img href='' alt='color_picker'></img>
+</button>
+{state.showColorPicker && <ColorPicker/>}
 <h2 className='titleimgPerfilInst'>Escoge color</h2>
 <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
 
