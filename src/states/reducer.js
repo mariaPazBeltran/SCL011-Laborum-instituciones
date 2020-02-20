@@ -39,7 +39,17 @@ function reducer(state, action){
         picture: action.payload.logoInstitucion,
         picture2:action.payload.logoInicio
        }
-
+       case 'backgroundColor':
+         return{
+           ...state,
+           background: action.payload,
+           showColorPicker: false
+         }
+        case 'showColor':
+          return{
+            ...state,
+            showColorPicker: true
+          }
       case 'reset':
         return InitialState
       
