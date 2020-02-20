@@ -1,15 +1,24 @@
-import React from 'react';
+import React from "react";
 import './ModalVerify.css'
 import celEmail from '../../img/celEmail.png'
-import { useUser } from "reactfire";
+import { useUser, useFirebaseApp } from "reactfire";
+import "firebase/auth";
+import {useHistory} from 'react-router-dom';
+
+ 
 const ModalVerify = () =>{
   const user = useUser()
+  let history = useHistory();
+  const firebase = useFirebaseApp();
   //condicional para saber si el usuario verifico su correo
   const ifVerify = () =>{
     if (user.emailVerified===false){alert('Aún no has verificado tu correo')}
-    else {alert('holiwis')}
+    else {
+      history.push("/");
+    }
   }
-  const notVerify = () =>{
+  const notVerify = async () =>{
+    await firebase.auth().currentUser.sendEmailVerification();
     alert('te hemos vuelto a enviar un correo')
   }
 

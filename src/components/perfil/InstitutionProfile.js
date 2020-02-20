@@ -21,7 +21,7 @@ const InstitutionProfile =()=>{
   };
 
 
-
+return(
   <div className='containerInstitutionProfile col-9'>
 
     <section className='title'>

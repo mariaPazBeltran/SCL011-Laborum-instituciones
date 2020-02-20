@@ -25,7 +25,6 @@ const Register = () => {
       localStorage.setItem('password', rememberMe ? password : '');
      const userAcc= await firebase.auth().createUserWithEmailAndPassword(email, password);
      if(userAcc)  await firebase.auth().currentUser.sendEmailVerification();
-     alert('se le ha enviado un email para verificar la cuenta')
   };
   const user=useUser()
   
@@ -33,8 +32,6 @@ const Register = () => {
      <div className="login-container">
       
         <h3 className='login-h3'>Registrarse</h3>
-
-   {!user && 
    
          <form>
           <label className='label'>Correo</label>
@@ -62,9 +59,9 @@ const Register = () => {
             Recuérdame
           </h6>
           <button onClick={register} className="btn-login">Comenzar</button>
-        </form> }
+        </form> 
         {user &&
-          <div><ModalVerify/></div>
+          <div> <ModalVerify/></div>
         }
       </div>
   );

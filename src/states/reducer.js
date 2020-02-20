@@ -50,6 +50,7 @@ function reducer(state, action){
             ...state,
             showColorPicker: true
           }
+          
       case 'reset':
         return InitialState
       

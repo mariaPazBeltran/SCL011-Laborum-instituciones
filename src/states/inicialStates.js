@@ -29,8 +29,6 @@ const initialState={
   twitter:'',
   
   background: '#fff',
-  showColorPicker: false
- 
-
+  showColorPicker: false,
 };
 export default initialState;
