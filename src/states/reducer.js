@@ -21,7 +21,20 @@ function reducer(state, action){
           password: action.payload.password,
           rememberMe: action.payload.rememberMe
         }
-      
+      case 'uploadFile':
+       
+       return{
+        ...state,
+        picture: action.payload,
+        picture2: action.payload
+       }
+       case 'getLocalStorageImg':
+       return{
+        ...state,
+        picture: action.payload.logoInstitucion,
+        picture2:action.payload.logoInicio
+       }
+
       case 'reset':
         return InitialState
       
