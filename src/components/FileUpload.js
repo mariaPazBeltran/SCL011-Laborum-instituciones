@@ -6,7 +6,6 @@ import "firebase/storage";
 import './FileUpload.css'
 import ColorPicker from './perfil/ColorPicker';
 
-
 const FileUpload =()=>{
   const {state, dispatch} = useContext(Context)
   const firebase = useFirebaseApp();
@@ -24,7 +23,6 @@ const FileUpload =()=>{
   }, [dispatch]);
 
 const upload=async(event)=>{
-
   const picture= event.target.files[0];
   const storageRef=  firebase.storage().ref(`/fotosInstitucion/${picture.name}`);
 
@@ -36,10 +34,8 @@ const upload=async(event)=>{
     
     localStorage.setItem('picture', url)
    })
-
 }
 const upload2=async(event)=>{
-
   const picture2= event.target.files[0];
   const storageRef2=  firebase.storage().ref(`/fotosInstitucion2/${picture2.name}`);
   await  storageRef2.put(picture2)

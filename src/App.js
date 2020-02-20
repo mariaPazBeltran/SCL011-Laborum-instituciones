@@ -6,8 +6,8 @@ import ProviderContext from './states/provider';
 import { useUser} from 'reactfire';
 import {BrowserRouter as Router,
   Route, Redirect} from 'react-router-dom';
-import Profile from './components/perfil/contInstitution';
-
+import Information from './components/perfil/infoInstitution';
+import InstitutionProfile from './components/perfil/InstitutionProfile'
 function App() {
   
   const user = useUser();
@@ -17,11 +17,12 @@ function App() {
       <div className="App">
       <Router>
     <Route exact path="/">
-  {user ? <Redirect to="/profile" /> : <LoginScreen />}
+  {user ? <Redirect to="/InformacionInstitucion" /> : <LoginScreen />}
 </Route>
         
         <Route path="/register" component={ RegisterScreen } />
-        <Route path="/profile" component={ Profile } />
+        <Route path="/InformacionContacto" component={ Information } />
+        <Route path="/InformacionInstitucion" component={ InstitutionProfile } />
     </Router>
     </div>
 
