@@ -4,6 +4,7 @@ import { useFirebaseApp} from "reactfire";
 import Context from '../states/context';
 import "firebase/storage";
 import './FileUpload.css'
+import ColorPicker from './perfil/ColorPicker';
 
 
 const FileUpload =()=>{
@@ -47,10 +48,9 @@ const upload2=async(event)=>{
   
   localStorage.setItem('picture2', url2)
  })
-
-
-
-  
+}
+const showColor = () => {
+  dispatch({type:'showColor'})
 }
 
   return(
@@ -62,8 +62,10 @@ const upload2=async(event)=>{
       onChange={upload} />
 <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
 <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
-
-<img href='' alt=''></img>
+<button onClick={showColor}>
+<img href='' alt='color_picker'></img>
+</button>
+{state.showColorPicker && <ColorPicker/>}
 <h2 className='titleimgPerfilInst'>Escoge color</h2>
 <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
 
