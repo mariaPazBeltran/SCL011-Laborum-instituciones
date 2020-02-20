@@ -39,7 +39,6 @@ const Login = () => {
     localStorage.setItem("password", rememberMe ? password : "");
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
-
 //recuperar contraseña
   const restore = async event => {
     event.preventDefault();
@@ -47,6 +46,7 @@ const Login = () => {
 
     await firebase.auth().sendPasswordResetEmail(email);
   };
+
 
   return (
     <div className="login-container">

@@ -3,6 +3,7 @@ import "firebase/auth";
 /* import { useFirebaseApp, useUser } from "reactfire";
 import Context from "../../states/context"; */
 import './style.css';
+import FileUpload from "../FileUpload";
 
 const InstitutionProfile =()=>{
 
@@ -17,20 +18,7 @@ return(
 
     <div className='contDatos'>
       <section className='imgPerfilInst'>
-
-        {/* <div className='logo'>   */}
-        <img href='' alt=''></img>
-        <h2 className='titleimgPerfilInst'>Sube tu logo</h2>
-        <p className='textimgPerfilInst'>Esta foto aparecerá en tu perfil. Debe medir 235px x 65px</p>
-        {/* <div className='color'>  */}
-        <img href='' alt=''></img>
-        <h2 className='titleimgPerfilInst'>Escoge color</h2>
-        <p className='textimgPerfilInst'>Se sugiere que sea el color corporativo </p>
-        {/* <div className='inicio'>  */}
-        <img href='' alt=''></img>
-        <h2 className='titleimgPerfilInst'>Sube tu foto de inicio</h2>
-        <p className='textimgPerfilInst'>Esta foto aparecerá en tu login de bolsa de trabajo. Debe medir 975px x 720px</p>
-
+        <FileUpload/>
       </section>
 
       <div className='modification'> <img href='' alt=''></img></div>
