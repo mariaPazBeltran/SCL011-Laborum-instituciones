@@ -353,4 +353,11 @@ h2{
   display: flex;
   justify-content: flex-end;
   margin-top: 1%;
+
+/* Datos de contacto */
+
+/*color prueba*/
+.colorPicker{
+  position: absolute;
+
 }

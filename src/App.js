@@ -7,7 +7,6 @@ import { useUser} from 'reactfire';
 import {BrowserRouter as Router,
   Route, Redirect} from 'react-router-dom';
 import Profile from './components/perfil/contInstitution';
-
 function App() {
   
   const user = useUser();
