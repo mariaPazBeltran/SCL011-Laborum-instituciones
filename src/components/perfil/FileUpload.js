@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-//import firebase from 'firebase';
 import { useFirebaseApp} from "reactfire";
 import Context from '../../states/context';
 import "firebase/storage";
