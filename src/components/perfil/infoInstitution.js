@@ -4,6 +4,7 @@ import "firebase/auth";
 //import { useFirebaseApp } from "reactfire";
 import Context from "../../states/context";
 import db from "../../config/config-firebase";
+import {Link} from 'react-router-dom';
 
 const Information = () => {
   const { state, dispatch } = useContext(Context);
@@ -99,7 +100,7 @@ const Information = () => {
                 </div>
             
                 <div className='buttonpag1'>
-                <button className='btn-atras1'>Atrás</button>
+                <button className='btn-atras1'><Link to="/">Atrás</Link></button>
                  <button className="btn-atras" onClick={sendFirebase}>
           {" "}
           Terminar
@@ -109,4 +110,4 @@ const Information = () => {
         </div>
     )
 }
-export default information;
+export default Information;

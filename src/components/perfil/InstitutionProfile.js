@@ -3,7 +3,7 @@ import "firebase/auth";
 /* import { useFirebaseApp, useUser } from "reactfire";
 import Context from "../../states/context"; */
 import './style.css';
-import FileUpload from "../FileUpload";
+import FileUpload from "./FileUpload";
 import Context from "../../states/context";
 import {Link} from 'react-router-dom';
 const InstitutionProfile =()=>{

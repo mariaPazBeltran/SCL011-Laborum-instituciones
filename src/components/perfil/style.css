@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Mada:400,500,600,700&display=swap');
+
 * {
   font-family: "Mada";
 }
@@ -353,11 +354,22 @@ h2{
   display: flex;
   justify-content: flex-end;
   margin-top: 1%;
-
+}
 /* Datos de contacto */
 
 /*color prueba*/
 .colorPicker{
   position: absolute;
 
+}
+.picker-color{
+  text-align: center;
+}
+.picker-color button{
+  text-align: center;
+  justify-content: center;
+  background-image: url('../../img/color.png');
+  
+  width: 4vh;
+  height: 4vh;
 }

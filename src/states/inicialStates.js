@@ -6,8 +6,8 @@ const initialState={
   password:'',
   rememberMe: false,
   uploadValue: 0,
-  picture: null,
-  picture2:null,
+  picture: Foto,
+  picture2:Foto,
   
   color:'',
   nameoftheinstitution:'',
