@@ -7,7 +7,7 @@ import { useUser} from 'reactfire';
 import {BrowserRouter as Router,
   Route, Redirect} from 'react-router-dom';
 import Profile from './components/perfil/contInstitution';
-
+import ProfileB from './components/perfil/contInfoDatos';
 function App() {
   
   const user = useUser();
@@ -22,6 +22,7 @@ function App() {
         
         <Route path="/register" component={ RegisterScreen } />
         <Route path="/profile" component={ Profile } />
+        <Route path="/InformacionContacto" component={ ProfileB } />
     </Router>
     </div>
 

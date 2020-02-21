@@ -1,3 +1,4 @@
+
 import React, { useContext, useEffect } from "react";
 import "firebase/auth";
 import { useFirebaseApp } from "reactfire";
@@ -80,8 +81,14 @@ const Login = () => {
               type="checkbox" 
               className='rememberMe'/> 
               Recuérdame
+
+
               <button className='h6' onClick={restore}>¿Olvidaste tu contraseña?</button>
             </h6>
+
+            
+            
+
             <button onClick={login} className="btn-login">Iniciar Sesión</button>
           </form>
 
@@ -90,3 +97,4 @@ const Login = () => {
 };
 
 export default Login;
+
