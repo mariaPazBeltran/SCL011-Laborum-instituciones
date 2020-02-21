@@ -106,6 +106,7 @@ const Information = () => {
           Terminar
         </button>
                 </div>
+
             </div>
         </div>
     )
